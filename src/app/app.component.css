@@ -4,6 +4,10 @@
   height: 100vh;
   width: 100vw;
 }
+.cards {
+  max-width: 798px;
+  margin: 0 auto;
+}
 .cards-list {
   height: 190px;
   overflow-y: auto;
