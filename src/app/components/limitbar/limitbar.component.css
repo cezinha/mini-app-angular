@@ -1,0 +1,30 @@
+.bar {
+  height: 6px;
+  background: rgba(127, 127, 127, 0.2);
+  margin: 8px 0;
+}
+.fill {
+  width: 12.8%;
+  height: 6px;
+  background-color:#009999;
+}
+.limit-bar {
+  padding: 0 16px;
+}
+.labels {
+  display: flex;
+  justify-content: space-between;
+}
+.limit-total {
+  text-align: right;
+}
+.label {
+  font-size: 10px;
+  letter-spacing: 0.5;
+  text-transform: uppercase;
+  color: rgba(127, 127, 127, 0.8);
+  margin: 4px 0;
+}
+.currency {
+  font-size: 12px;
+}

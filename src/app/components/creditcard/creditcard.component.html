@@ -1,6 +1,11 @@
 <div class="card">
-  <div class="card-image" style="{{getCardImage(flag)}}"></div>
-  <div>{{name}}</div>
-  <div><span class="digit">{{lastDigits}}</span></div>
-  <div>{{expirationDate}}</div>
+  <div class="card-logo" style="{{getCardImage(flag)}}"></div>
+  <div class="card-name">{{name}}</div>
+  <div class="card-digits">
+    <div class="digit">••••</div>
+    <div class="digit">••••</div>
+    <div class="digit">••••</div>
+    <div class="digit">{{lastDigits}}</div>
+  </div>
+  <div class="card-date">{{expirationDate}}</div>
 </div>

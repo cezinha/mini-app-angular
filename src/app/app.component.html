@@ -1,6 +1,30 @@
-<hello name="{{ name }}"></hello>
-<p>
-  Start editing to see some magic happen :)
-</p>
-<Button variant="green">Test Button</Button>
-<CreditCard name="John Doe" lastDigits="8899" expirationDate="07/29" flag="VISA"></CreditCard>
+<div class="main">
+  <h1>Cartões de Crédito</h1>
+  <div class="cards-wrapper">
+    <div class="cards-list">
+      <CreditCard name="John Doe" lastDigits="8899" expirationDate="07/29" flag="MASTERCARD"></CreditCard>
+      <EmptyCard></EmptyCard>
+    </div>
+  </div>
+  <div class="expenses">
+    <div class="icons">
+      <h2>Atalhos rápidos:</h2>
+      <div class="icons-wrapper">
+        <div class="icons-list">
+          <IconButton type="lock" label="Bloquear"></IconButton>
+          <IconButton type="history" label="Transações"></IconButton>
+          <IconButton type="dollar" label="Pagar"></IconButton>
+          <IconButton type="check-shield" label="Limite"></IconButton>
+          <IconButton type="message-error" label="Notificações"></IconButton>
+          <IconButton type="x-circle" label="Cancelar"></IconButton>
+        </div>
+      </div>
+    </div>
+    <LimitBar></LimitBar>
+    <div class="last-transaction">
+      <h2>Últimas transações:</h2>
+      <TransactionLine title="Amazon" description="10/08 00:00 - Compras" price="R$ 329,00"></TransactionLine>
+      <TransactionLine title="Spotify" description="01/08 00:00 - Assinatura" price="R$ 19,90"></TransactionLine>
+      <TransactionLine title="Netflix" description="01/08 00:00 - Assinatura" price="R$ 29,90"></TransactionLine>
+  </div>
+</div>
