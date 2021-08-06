@@ -11,7 +11,7 @@
       "schematics": {},
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "ngx-build-plus:browser",
           "options": {
             "outputPath": "dist/mini-app-angular",
             "index": "src/index.html",
@@ -32,7 +32,9 @@
             "buildOptimizer": false,
             "sourceMap": true,
             "optimization": false,
-            "namedChunks": true
+            "namedChunks": true,
+            "extraWebpackConfig": "webpack.config.js",
+            "commonChunk": false
           },
           "configurations": {
             "production": {
@@ -50,30 +52,35 @@
               "aot": true,
               "extractLicenses": true,
               "vendorChunk": false,
-              "buildOptimizer": true
+              "buildOptimizer": true,
+              "extraWebpackConfig": "webpack.prod.config.js"
             }
           },
           "defaultConfiguration": ""
         },
         "serve": {
-          "builder": "@angular-devkit/build-angular:dev-server",
+          "builder": "ngx-build-plus:dev-server",
           "options": {
-            "browserTarget": "mini-app-angular:build"
+            "browserTarget": "mini-app-angular:build",
+            "extraWebpackConfig": "webpack.config.js",
+            "port": 4000
           },
           "configurations": {
             "production": {
-              "browserTarget": "mini-app-angular:build:production"
+              "browserTarget": "mini-app-angular:build:production",
+              "extraWebpackConfig": "webpack.prod.config.js"
             }
           }
         },
         "extract-i18n": {
-          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "builder": "ngx-build-plus:extract-i18n",
           "options": {
-            "browserTarget": "mini-app-angular:build"
+            "browserTarget": "mini-app-angular:build",
+            "extraWebpackConfig": "webpack.config.js"
           }
         },
         "test": {
-          "builder": "@angular-devkit/build-angular:karma",
+          "builder": "ngx-build-plus:karma",
           "options": {
             "main": "src/test.ts",
             "polyfills": "src/polyfills.ts",
@@ -86,7 +93,8 @@
             "assets": [
               "src/favicon.ico",
               "src/assets"
-            ]
+            ],
+            "extraWebpackConfig": "webpack.config.js"
           }
         },
         "lint": {

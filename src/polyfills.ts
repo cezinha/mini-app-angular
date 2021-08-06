@@ -68,4 +68,5 @@ import 'zone.js';  // Included with Angular CLI.
  * Date, currency, decimal and percent pipes.
  * Needed for: All but Chrome, Firefox, Edge, IE11 and Safari 10
  */
-// import 'intl';  // Run `npm install --save intl`.
+// import 'intl';  // Run `npm install --save intl`.import 'document-register-element';
+import 'document-register-element';
