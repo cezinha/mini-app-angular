@@ -12,8 +12,9 @@ import { LimitBarComponent } from "./components/limitbar/limitbar.component";
 import { TransactionLineComponent } from "./components/transactionline/transactionline.component";
 import { APP_BASE_HREF } from "@angular/common";
 import { createCustomElement } from "@angular/elements";
+import { RendererModule, TransferHttpCacheModule } from '@nguniversal/common/clover';
 @NgModule({
-  imports: [BrowserModule, FormsModule],
+  imports: [BrowserModule.withServerTransition({ appId: 'appId' }), FormsModule, RendererModule.forRoot(), TransferHttpCacheModule],
   declarations: [
     AppComponent,
     HelloComponent,

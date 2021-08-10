@@ -15,6 +15,7 @@
     "@angular/router": "^12.1.4",
     "@babel/core": "^7.14.8",
     "@emotion/css": "^11.1.3",
+    "@nguniversal/common": "^12.1.0",
     "document-register-element": "^1.7.2",
     "express": "^4.17.1",
     "nodemon": "^2.0.12",
@@ -29,12 +30,18 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "run:all": "node node_modules/@angular-architects/module-federation/src/server/mf-dev-server.js"
+    "run:all": "node node_modules/@angular-architects/module-federation/src/server/mf-dev-server.js",
+    "prerender": "ng run mini-app-angular:prerender",
+    "build:client-and-server": "ng build mini-app-angular && ng run mini-app-angular:server",
+    "build:server": "ng run mini-app-angular:server",
+    "serve:ssr": "node dist/mini-app-angular/server/main.js"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~12.1.4",
     "@angular/cli": "~12.1.4",
     "@angular/compiler-cli": "~12.1.4",
+    "@nguniversal/builders": "~12.1.0",
+    "@types/express": "^4.17.0",
     "@types/jasmine": "~3.6.0",
     "@types/node": "^12.11.1",
     "codelyzer": "^6.0.0",
