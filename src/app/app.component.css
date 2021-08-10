@@ -46,6 +46,11 @@ body {
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 }
+@media only screen and (min-width:321px) and (max-width:768px) {
+  .cards-mfe .expenses {
+    padding-bottom: 40px;
+  }
+}
 .cards-mfe .icons-wrapper {
   height: 90px;
   overflow: hidden;

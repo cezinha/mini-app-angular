@@ -3,20 +3,17 @@ import {
   OnInit,
   Input,
   HostBinding,
-  AfterContentInit,
-  SimpleChanges
-} from '@angular/core';
-import { css } from '@emotion/css';
-import { BehaviorSubject } from 'rxjs';
+  SimpleChanges,
+} from "@angular/core";
+import { css } from "@emotion/css";
+import { BehaviorSubject } from "rxjs";
 
 @Component({
-  selector: 'Button',
-  template: `
-    <ng-content></ng-content>
-  `
+  selector: "Button",
+  template: ` <ng-content></ng-content> `,
 })
 export class ButtonComponent implements OnInit {
-  @HostBinding('class') className;
+  @HostBinding("class") className;
   @Input() customStyle: string;
   @Input() variant: string;
   @Input() small: boolean;
@@ -24,13 +21,13 @@ export class ButtonComponent implements OnInit {
   defaultInputs = new BehaviorSubject<any>({
     small: false,
     disable: false,
-    variant: 'red'
+    variant: "red",
   });
 
   constructor() {}
 
   ngOnChanges(changes: SimpleChanges) {
-    const inputs = Object.keys(changes).reduce(function(result, item) {
+    const inputs = Object.keys(changes).reduce(function (result, item) {
       result[item] = changes[item].currentValue;
       return result;
     }, {});
@@ -49,24 +46,24 @@ export class ButtonComponent implements OnInit {
       font-size: 16px;
       margin: 4px 2px;
       cursor: pointer;
-      ${inputs.variant === 'red' &&
-        css`
-          background-color: #f44336;
-        `}
-      ${inputs.variant === 'green' &&
-        css`
-          background-color: #4caf50;
-        `}
+      ${inputs.variant === "red" &&
+      css`
+        background-color: #f44336;
+      `}
+      ${inputs.variant === "green" &&
+      css`
+        background-color: #4caf50;
+      `}
       ${inputs.small &&
-        css`
-          padding: 5px 10px;
-        `}
+      css`
+        padding: 5px 10px;
+      `}
       ${inputs.disable &&
-        css`
-          cursor: not-allowed;
-          pointer-events: none;
-          opacity: 0.3;
-        `}
+      css`
+        cursor: not-allowed;
+        pointer-events: none;
+        opacity: 0.3;
+      `}
     `;
   }
 
