@@ -1,4 +1,4 @@
-import { NgModule } from "@angular/core";
+import { Injector, NgModule } from "@angular/core";
 import { BrowserModule } from "@angular/platform-browser";
 import { FormsModule } from "@angular/forms";
 
@@ -10,6 +10,8 @@ import { EmptyCardComponent } from "./components/emptycard/emptycard.component";
 import { IconButtonComponent } from "./components/ui/iconbutton/iconbutton.component";
 import { LimitBarComponent } from "./components/limitbar/limitbar.component";
 import { TransactionLineComponent } from "./components/transactionline/transactionline.component";
+import { APP_BASE_HREF } from "@angular/common";
+import { createCustomElement } from "@angular/elements";
 @NgModule({
   imports: [BrowserModule, FormsModule],
   declarations: [
@@ -22,6 +24,15 @@ import { TransactionLineComponent } from "./components/transactionline/transacti
     LimitBarComponent,
     TransactionLineComponent,
   ],
-  bootstrap: [AppComponent],
+  providers: [],
+  bootstrap: []
 })
-export class AppModule {}
+export class AppModule { 
+  constructor(private injector: Injector) {
+  }
+
+  ngDoBootstrap() {
+    const ce = createCustomElement(AppComponent, {injector: this.injector});
+    customElements.define('mfe1-element', ce);
+  }
+}
