@@ -1,3 +1,9 @@
+h2 {
+  font-size: 16px;
+  margin: 8px 0;
+  color: #00b3b3;
+}
+
 .bar {
   height: 6px;
   background: rgba(127, 127, 127, 0.2);

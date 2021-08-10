@@ -1,13 +1,1 @@
 /* Add application styles & imports to this file! */
-body {
-  font-family: Lato, Arial, Helvetica, sans-serif;
-  margin: 0;
-  padding: 0;
-  background: #003d4d;
-}
-
-h2 {
-  font-size: 16px;
-  margin: 8px 0;
-  color: #00b3b3;
-}

@@ -1,27 +1,43 @@
-.main {
+body {
+  font-family: Lato, Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #003d4d;
+}
+
+.cards-mfe h2 {
+  font-size: 16px;
+  margin: 8px 0;
+  color: #00b3b3;
+}
+
+.main.cards-mfe {
+  font-family: Lato, Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
   background: #003d4d;
   padding: 16px 0 0;
 }
-.cards {
+.cards-mfe .cards {
   max-width: 798px;
   margin: 0 auto;
 }
-.cards-list {
+.cards-mfe .cards-list {
   height: 190px;
   overflow-y: auto;
   display: flex;
 }
-.cards-wrapper {
+.cards-mfe .cards-wrapper {
   overflow: hidden;
   height: 180px;
 }
-h1 {
+.cards-mfe h1 {
   color: rgba(255,255,255,0.5);
   font-size: 16px;
   font-weight: 400;
   margin: 0 16px 16px;
 }
-.expenses {
+.cards-mfe .expenses {
   max-width: 798px;
   margin: 0 auto;
   padding-top: 8px;
@@ -30,24 +46,24 @@ h1 {
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 }
-.icons-wrapper {
+.cards-mfe .icons-wrapper {
   height: 90px;
   overflow: hidden;
   margin-top: 8px;
 }
-.icons-list {
+.cards-mfe .icons-list {
   height: 100px;
   overflow-y: auto;
   display: flex;
   padding: 0 10px;
 }
-.last-transaction {
+.cards-mfe .last-transaction {
   padding: 0 16px;
   margin: 24px 0;
 }
-.icons h2 {
+.cards-mfe .icons h2 {
   margin: 16px 16px;
 }
-.last-transaction h2 {
+.cards-mfe .last-transaction h2 {
   margin: 16px 0;
 }
